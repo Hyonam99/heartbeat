@@ -1,0 +1,18 @@
+import { configureStore } from "@reduxjs/toolkit";
+import { useDispatch, useSelector } from "react-redux";
+import attendance from "@/store/attendanceSlice";
+import auth from "@/store/authSlice";
+import departments from "@/store/departmentsSlice";
+import members from "@/store/membersSlice";
+import roster from "@/store/rosterSlice";
+import settings from "@/store/settingsSlice";
+
+export const makeStore = () =>
+  configureStore({ reducer: { auth, attendance, roster, members, departments, settings } });
+
+export type AppStore = ReturnType<typeof makeStore>;
+export type RootState = ReturnType<AppStore["getState"]>;
+export type AppDispatch = AppStore["dispatch"];
+
+export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
+export const useAppSelector = useSelector.withTypes<RootState>();

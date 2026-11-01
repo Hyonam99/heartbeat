@@ -1,0 +1,18 @@
+{
+  "Auth": { "Login": "/login" },
+  "Member": {
+    "CheckIn": "/",
+    "History": "/history",
+    "Duties": "/duties",
+    "Leaderboard": "/leaderboard"
+  },
+  "Admin": {
+    "Dashboard": "/admin",
+    "Attendance": "/admin/attendance",
+    "Override": "/admin/override",
+    "Roster": "/admin/roster",
+    "Leaderboard": "/admin/leaderboard",
+    "Members": "/admin/members",
+    "Settings": "/admin/settings"
+  }
+}
